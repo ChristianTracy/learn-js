@@ -31,5 +31,18 @@ You'll found a `.vscode` folder with a configuration to use standarjs extension.
 You need to install this extension [STANDARDJS for VSCODE](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs)
 
 
-### This project is using NextJS
+## This project is using NextJS
 [NEXTJS](https://nextjs.org)
+
+## Generate static page
+If you want to export this app into a static site you can do it with the command:
+```
+    npm run export
+```
+This will export the entire site in `out` folder.
+
+You can test it locally running this command in the root folder 
+
+```
+    npx http-server ./out
+```
