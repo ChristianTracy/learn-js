@@ -1,4 +1,5 @@
 import Prism from 'prismjs'
+import { withNamespaces } from '../common/i18n'
 
 var code = `
   const example = "This is an example"
@@ -8,11 +9,18 @@ var code = `
 `
 var html = Prism.highlight(code, Prism.languages.javascript, 'javascript')
 
-export default () => (
+const Home = ({ t }) => (
   <div>
-    Code
+    {t('description')}
     <pre className='line-numbers language-javascript' data-start='0'>
       <code className='language-javascript' dangerouslySetInnerHTML={{ __html: html }} />
     </pre>
   </div>
 )
+
+Home.getInitialProps = async ({ req }) => {
+  return {
+    namespacesRequired: ['common']
+  }
+}
+export default withNamespaces('common')(Home)

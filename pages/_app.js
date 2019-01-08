@@ -1,5 +1,6 @@
 import App, { Container } from 'next/app'
 import Page from '../components/Page'
+import { appWithTranslation } from '../common/i18n'
 
 class MyApp extends App {
   render () {
@@ -14,4 +15,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

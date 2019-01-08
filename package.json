@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "express": "^4.16.4",
     "next": "^7.0.2",
+    "next-i18next": "^0.17.1",
     "nprogress": "^0.2.0",
     "prismjs": "^1.15.0",
     "react": "^16.6.3",
@@ -20,8 +22,9 @@
     "standard": "^12.0.1"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "node server",
     "build": "next build",
+    "export": "npm run build && next export",
     "start": "next start",
     "test": "standard --verbose | snazzy",
     "format": "standard --fix"
